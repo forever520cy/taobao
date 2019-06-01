@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/details.css"/>
+	<link rel="stylesheet" type="text/css" href="dist/css/swiper.css"/>
+	<style type="text/css">
+		
+	</style>
+	<body>
+		<!--轮播图-->
+		<!--<div class="banner swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="images/carouselBox61.jpg"/></div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>-->
+		
+		<!--价格-->
+		<!--<div class="price">
+			<div class="now_price">￥555</div>
+			<div class="old_price">价格 ￥222</div>
+		</div>-->
+		
+		
+		<!--商品详情-->
+		<div class="pro_details">
+			<div class="pro_name">
+				
+			</div>
+			<div class="details_content">
+				
+			</div>
+		</div>
+		
+		<!--底部-->
+		<div class="footer">
+			<div class="footer_left">
+				<ul>
+					<li>
+						<img src="images/footer1.png"/>
+						<p>客服</p>
+					</li>
+					<li>
+						<img src="images/footer2.png"/>
+						<p>店铺</p>
+					</li>
+					<li>
+						<img src="images/footer3.png"/>
+						<p>收藏</p>
+					</li>
+				</ul>
+			</div>
+			<div class="footer_right">
+				<div class="car">加入购物车</div>
+				<div class="buy">立即购买</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="dist/js/swiper.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		function rem(doc, win) {
+			let docEl = doc.documentElement; //html 考虑以及兼容了 屏幕旋转的事件
+			//判断事件orientationchange 横屏 事件  或resize 
+			let resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+			let recalc = function() {
+				var clientWidth = docEl.clientWidth; //获取屏幕大小
+				if(!clientWidth) {
+					return
+				}; //未获取屏幕尺寸        
+				//屏幕大于750
+				if(clientWidth >= 1244) {
+					docEl.style.fontSize = '100px';
+				} else {
+					//			           	html的font-size         100* 设备宽度 / 750
+					docEl.style.fontSize = 100 * (clientWidth / 1244) + 'px';
+				}
+			};
+			if(!doc.addEventListener) {
+				return;
+			} //addEventListener 兼容判断
+
+			win.addEventListener(resizeEvt, recalc, false); // 屏幕大小以及旋转变化自适应
+			doc.addEventListener('DOMContentLoaded', recalc, false); // 页面初次打开自适应
+			recalc();
+		}
+		rem(document, window);
+		
+		//获取search值中的id
+		function getQueryString(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if(r != null) {
+			    return decodeURIComponent(r[2]);
+			}
+			return '';
+		}
+		var pid=getQueryString("id");
+		console.log(pid)
+		
+		
+		$.ajax({
+			type:"post",
+			url:"https://api.ymduo.com/item/index",
+			async:true,
+			data:{
+				"gid":pid
+			},
+			success:function(res){
+				//console.log(res)
+				var arr = res.result.data
+				//console.log(arr)
+				$(".now_price").html('￥ '+arr.price)
+				$(".old_price").html('￥ '+arr.old_price)
+				$(".pro_name").html(arr.goods_name)
+				$(".details_content").html(arr.detail.in_detail)
+				//console.log(arr.detail.in_detail)
+				var imgArr = arr.image
+				//console.log(imgArr)
+				var bannerStr = ""
+				for(var i=0;i<imgArr.length;i++){
+					bannerStr += '<div class="swiper-slide"><img src="'+imgArr[i]+'"/></div>'
+				}
+				$(".swiper-wrapper").html(bannerStr)
+				
+				//轮播图
+				var swiper = new Swiper('.swiper-container', {
+			      	spaceBetween: 30,
+			      	centeredSlides: true,
+			      	autoplay: {
+			        	delay: 2500,
+			        	disableOnInteraction: false,
+			      	},
+			      	pagination: {
+			        	el: '.swiper-pagination',
+			        	clickable: true,
+			      	},
+			      	loop:true
+			    });
+			}
+		});
+		
+		
+		
+	</script>
+</html>

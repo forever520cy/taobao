@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>淘宝</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="dist/css/swiper.css"/>
+	<body>
+		<!--头部开始-->
+		<div class="header">
+			<div class="erweima">
+				<img src="images/效果图1_03.png"/>
+				<p>扫一扫</p>
+			</div>
+			<div class="search">
+				<i><img src="images/效果图1_09.png"/></i>
+				<input type="text" name="" id="" value="" placeholder="芊芊玉手如何保养" />
+				<p></p>
+			</div>
+			<div class="info">
+				<img src="images/效果图1_06.png"/>
+				<p>消息</p>
+			</div>
+		</div>
+		<!--头部结束-->
+		<!--轮播图开始-->
+		<div class="banner swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="images/carouselBox61.jpg"/></div>
+				<div class="swiper-slide"><img src="images/carouselBox62.jpg"/></div>
+				<div class="swiper-slide"><img src="images/carouselBox63.jpg"/></div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<!--轮播图结束-->
+		
+		<!--列表开始-->
+		<div class="list">
+			<ul>
+				<li>
+					<img src="images/menu1.png"/>
+					<p>天猫</p>
+				</li>
+				<li>
+					<img src="images/menu2.png"/>
+					<p>聚划算</p>
+				</li>
+				<li>
+					<img src="images/menu3.png"/>
+					<p>淘生活</p>
+				</li>
+				<li>
+					<img src="images/menu4.png"/>
+					<p>淘点点</p>
+				</li>
+				<li>
+					<img src="images/menu5.png"/>
+					<p>天猫超市</p>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<img src="images/menu6.png"/>
+					<p>充值</p>
+				</li>
+				<li>
+					<img src="images/menu7.png"/>
+					<p>旅行</p>
+				</li>
+				<li>
+					<img src="images/menu8.png"/>
+					<p>金币</p>
+				</li>
+				<li>
+					<img src="images/menu9.png"/>
+					<p>宝箱</p>
+				</li>
+				<li>
+					<img src="images/menu10.png"/>
+					<p>分类</p>
+				</li>
+			</ul>
+		</div>
+		<!--列表结束-->
+		
+		<!--商品推荐开始-->
+		<div class="recommend">
+			<div class="recommend_left">
+				<img src="images/hotPic1.png"/>
+			</div>
+			<div class="recommend_right">
+				<div class="hotPic2"><img src="images/hotPic2.png"/></div>
+				<div class="hotPic3">
+					<img src="images/hotPic3.png"/>
+					<img src="images/hotPic4.png"/>
+				</div>
+			</div>
+		</div>
+		<!--商品推荐结束-->
+		
+		<!--排序开始-->
+		<div class="paixu" style="background: #eee;">
+			<ul>
+				<li class="txt">综合排序</li>
+				<li class="txt">销量优先</li>
+				<li class="txt">筛选</li>
+				<li class="last"><img src="images/01.png" alt="" /></li>
+			</ul>
+		</div>
+		<!--排序结束-->
+		
+		<!--商品列表开始-->
+		<div class="pro_list">
+			<!--<div class="pro" id="list">
+				<img src="images/pic1.png"/>
+				<div class="content">
+					<p class="des">
+						
+					</p>
+					<p class="price">￥&nbsp;115</p>
+					<p class="content_bottom">
+						<span class="content_left">月销量</span>
+						<span class="content_right">免邮费</span>
+					</p>
+				</div>
+			</div>-->
+			<!--<div class="pro2">
+				<div class="pro_img"><img src="images/pic2.png"/></div>
+				<div class="pro2_txt">
+					<p class="pro2_des">规划考虑呢咖科技和哈哈防弹少年老师的奶奶发大师傅的打底裤立方米生的法律法</p>
+					<p class="pro2_price">￥&nbsp;155</p>
+					<span>月销&nbsp;63&nbsp;笔&nbsp;</span>&nbsp;<span>免邮费</span>
+				</div>
+			</div>-->
+			
+			
+		</div>
+		<!--商品列表结束-->
+		
+		<div style="margin-bottom: .7rem;"></div>
+		
+		<!--底部开始-->
+		<div class="footer">
+			<ul>
+				<li>
+					<img src="images/效果图13.png"/>
+					<p>首页</p>
+				</li>
+				<li>
+					<img src="images/效果图14.png"/>
+					<p>微淘</p>
+				</li>
+				<li>
+					<img src="images/效果图15.png"/>
+					<p>发现</p>
+				</li>
+				<li>
+					<img src="images/效果图16.png"/>
+					<p>购物车</p>
+				</li>
+				<li>
+					<img src="images/效果图17.png"/>
+					<p>我的商城</p>
+				</li>
+			</ul>
+		</div>
+		<!--底部结束-->
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="dist/js/swiper.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function rem(doc, win) {
+			let docEl = doc.documentElement; //html 考虑以及兼容了 屏幕旋转的事件
+			//判断事件orientationchange 横屏 事件  或resize 
+			let resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+			let recalc = function() {
+				var clientWidth = docEl.clientWidth; //获取屏幕大小
+				if(!clientWidth) {
+					return
+				}; //未获取屏幕尺寸        
+				//屏幕大于750
+				if(clientWidth >= 403) {
+					docEl.style.fontSize = '100px';
+				} else {
+					//			           	html的font-size         100* 设备宽度 / 750
+					docEl.style.fontSize = 100 * (clientWidth / 403) + 'px';
+				}
+			};
+			if(!doc.addEventListener) {
+				return;
+			} //addEventListener 兼容判断
+
+			win.addEventListener(resizeEvt, recalc, false); // 屏幕大小以及旋转变化自适应
+			doc.addEventListener('DOMContentLoaded', recalc, false); // 页面初次打开自适应
+			recalc();
+		}
+		rem(document, window);
+		
+		//轮播图
+		var swiper = new Swiper('.swiper-container', {
+	      	spaceBetween: 30,
+	      	centeredSlides: true,
+	      	autoplay: {
+	        	delay: 2500,
+	        	disableOnInteraction: false,
+	      	},
+	      	pagination: {
+	        	el: '.swiper-pagination',
+	        	clickable: true,
+	      	},
+	      	loop:true
+	    });
+	    
+	   
+	    
+	    
+	    
+	    
+	    //请求数据
+	    $.ajax({
+	    	type:"post",
+	    	url:"https://api.ymduo.com/Interface/recommendlists",
+	    	async:true,
+	    	success:function(res){
+	    		var arr = res.result.data
+	    		console.log( arr)
+	    		//var flag = true
+	    		var proStr = ""
+	    		var pro2Str = ""
+	    		
+	    		for(var i=0;i<arr.length;i++){
+	    			proStr += '<div class="pro" pid="'+arr[i].goods_id+'">'
+							+'<img src="'+arr[i].image+'"/>'
+							+'<div class="content">'
+								+'<p class="des">'+arr[i].goods_name+'</p>'
+								+'<p class="price">￥&nbsp;'+arr[i].price+'</p>'
+								+'<p class="content_bottom">'
+									+'<span class="content_left">月销量&nbsp;'+arr[i].pay_num+'</span>'
+									+'<span class="content_right">免邮费</span>'
+								+'</p>'
+							+'</div>'
+						+'</div>'
+	    		}
+	    		
+	    		
+	    		for(var i=0;i<arr.length;i++){
+	    			pro2Str += '<div class="pro2" pid="'+arr[i].goods_id+'">'
+								+'<div class="pro_img"><img src="'+arr[i].image+'"/></div>'
+								+'<div class="pro2_txt">'
+									+'<p class="pro2_des">'+arr[i].goods_name+'</p>'
+									+'<p class="pro2_price">￥&nbsp;'+arr[i].price+'</p>'
+									+'<span>月销&nbsp;'+arr[i].pay_num+'&nbsp;笔&nbsp;</span>&nbsp;<span>免邮费</span>'
+								+'</div>'
+							+'</div>'
+	    		}
+	    		$(".pro_list").html(proStr)
+	    		//$(".pro_list").html(pro2Str)
+	    		
+	    		 //切换
+			    var flag = false
+			    $(".last").click(function(){
+			    	if(flag){
+			    		$(".pro_list").html(proStr)
+			    		$(".pro").click(function(){
+							var pid = $(this).attr("pid")
+							console.log(pid)
+							location.href = "details.html?id="+pid
+						})
+			    		flag = false
+			    	}else{
+			    		$(".pro_list").html(pro2Str)
+			    		$(".pro2").click(function(){
+							var pid = $(this).attr("pid")
+							location.href = "details.html?id="+pid
+						})
+			    		flag = true
+			    	}
+			    })
+				
+				$(".pro").click(function(){
+					var pid = $(this).attr("pid")
+					location.href = "details.html?id="+pid
+				})
+				
+	    	}
+	    });
+		
+		
+		
+	</script>
+</html>

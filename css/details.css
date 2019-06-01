@@ -1,0 +1,139 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+body {
+	font-size: 16px;
+	background: #f4f4f4;
+}
+
+/*轮播图开始*/
+.banner {
+	height: 12.36rem;
+}
+
+.swiper-container {
+	width: 100%;
+	/*height: 100%;*/
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+/*轮播图结束*/
+
+/*价格开始*/
+.price{
+	margin-top: .4rem;
+	padding-left: .3rem;
+	background: #fff;
+}
+.now_price{
+	font-size: .56rem;
+	color: #ff003b;
+}
+.old_price{
+	font-size: .38rem;
+	color: #989898;
+}
+/*价格结束*/
+
+/*商品名称*/
+.pro_details{
+	background: #fff;
+	border: 1px solid transparent;
+}
+.pro_name{
+	margin-top: .5rem;
+	margin-left: .3rem;
+	font-size: .38rem;
+	text-align: center;
+}
+.details_content{
+	text-align: center;
+}
+
+/*底部*/
+.footer{
+	position: fixed;
+	bottom: 0;
+	border-top: .02rem solid #ccc;
+	width: 100%;
+	height: 1.45rem;
+	display: flex;
+	background: #fff;
+	
+}
+.footer_left{
+	width: 40%;
+	height: 100%;
+	/*background: skyblue;*/
+}
+.footer_left ul{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.footer_left ul li{
+	width: 33.3%;
+	height: 100%;
+	border-right: .01rem solid #ccc;
+	text-align: center;
+	font-size: .3rem;
+	/*background: yellow;*/
+}
+.footer_left ul li img{
+	margin-top: .15rem;
+}
+.footer_left ul li:nth-child(3){
+	border: none;
+}
+.footer_right{
+	width: 60%;
+	height: 100%;
+	line-height: 100%;
+	display: flex;
+	color: #fff;
+	font-size: .48rem;
+	/*text-align: center;*/
+}
+.footer_right .car{
+	width: 55%;
+	height: 100%;
+	line-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fe9402;
+}
+.footer_right .buy{
+	width: 45%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fe0036;
+}
