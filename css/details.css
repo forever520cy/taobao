@@ -10,6 +10,22 @@ body {
 	background: #f4f4f4;
 }
 
+/*返回*/
+.returnBtn{
+	width: .7rem;
+	height: .7rem;
+	line-height: .6rem;
+	text-align: center;
+	position: fixed;
+	top: .3rem;
+	left: .2rem;
+	z-index: 100;
+	font-size: .6rem;
+	color: #fff;
+	border-radius: 50%;
+	background: rgba(0,0,0,.3);
+}
+
 /*轮播图开始*/
 .banner {
 	height: 12.36rem;
